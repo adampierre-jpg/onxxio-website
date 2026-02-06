@@ -1,0 +1,3 @@
+export const INTRO_VIDEO_ID = 'VIDEO_ID_INTRO';
+export const MOVEMENT_VIDEO_ID = 'VIDEO_ID_MOVEMENT';
+export const DRILL_VIDEO_ID = 'VIDEO_ID_DRILL';

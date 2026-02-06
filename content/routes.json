@@ -1,0 +1,221 @@
+{
+  "origin": "https://www.essentialfitness.co",
+  "discoveredAtISO": "2026-02-06T15:00:10.709Z",
+  "routes": [
+    {
+      "url": "https://www.essentialfitness.co/",
+      "pathname": "/",
+      "type": "home"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog",
+      "pathname": "/blog",
+      "type": "blogIndex"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/an-instrument-for-recovery",
+      "pathname": "/blog/an-instrument-for-recovery",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/breathe-ability-part-i-the-knowledge",
+      "pathname": "/blog/breathe-ability-part-i-the-knowledge",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/breatheabilitypartii",
+      "pathname": "/blog/breatheabilitypartii",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/category/Recovery+Methods",
+      "pathname": "/blog/category/Recovery+Methods",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/category/Recovery+Tools",
+      "pathname": "/blog/category/Recovery+Tools",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/category/Training+Methods",
+      "pathname": "/blog/category/Training+Methods",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/check-the-windows-first",
+      "pathname": "/blog/check-the-windows-first",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/deeper-roots",
+      "pathname": "/blog/deeper-roots",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/exercise-selection",
+      "pathname": "/blog/exercise-selection",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/keepgettingup",
+      "pathname": "/blog/keepgettingup",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/little-by-little",
+      "pathname": "/blog/little-by-little",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/lufreprcuq6mv7u0gep8mmti5y71za",
+      "pathname": "/blog/lufreprcuq6mv7u0gep8mmti5y71za",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/movement-patterns-vs-individual-muscles",
+      "pathname": "/blog/movement-patterns-vs-individual-muscles",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/stop-hiiting-yourself",
+      "pathname": "/blog/stop-hiiting-yourself",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/antiglycolytic",
+      "pathname": "/blog/tag/antiglycolytic",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/breathing",
+      "pathname": "/blog/tag/breathing",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Cardiac+Output",
+      "pathname": "/blog/tag/Cardiac+Output",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Conditioning",
+      "pathname": "/blog/tag/Conditioning",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Energy+Systems",
+      "pathname": "/blog/tag/Energy+Systems",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/heart+rate",
+      "pathname": "/blog/tag/heart+rate",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Heart+Rate+Variability",
+      "pathname": "/blog/tag/Heart+Rate+Variability",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/HRV",
+      "pathname": "/blog/tag/HRV",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Kettlebell",
+      "pathname": "/blog/tag/Kettlebell",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Metabolism",
+      "pathname": "/blog/tag/Metabolism",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/plan",
+      "pathname": "/blog/tag/plan",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/program",
+      "pathname": "/blog/tag/program",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/programming",
+      "pathname": "/blog/tag/programming",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Recovery",
+      "pathname": "/blog/tag/Recovery",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Strength+Training",
+      "pathname": "/blog/tag/Strength+Training",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/strongendurance",
+      "pathname": "/blog/tag/strongendurance",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Training+Journal",
+      "pathname": "/blog/tag/Training+Journal",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/tag/Training+Program",
+      "pathname": "/blog/tag/Training+Program",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/telling-aint-teaching",
+      "pathname": "/blog/telling-aint-teaching",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/the-joy-of-movement",
+      "pathname": "/blog/the-joy-of-movement",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/traintorecover",
+      "pathname": "/blog/traintorecover",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/we-learn-to-move-by-moving",
+      "pathname": "/blog/we-learn-to-move-by-moving",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/when-life-meets-iron-training-as-a-support-system-not-your-whole-system",
+      "pathname": "/blog/when-life-meets-iron-training-as-a-support-system-not-your-whole-system",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/why-train-barefoot",
+      "pathname": "/blog/why-train-barefoot",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/blog/work-on-not-workout",
+      "pathname": "/blog/work-on-not-workout",
+      "type": "blogPost"
+    },
+    {
+      "url": "https://www.essentialfitness.co/cart",
+      "pathname": "/cart",
+      "type": "page"
+    },
+    {
+      "url": "https://www.essentialfitness.co/dad-ready-assessment",
+      "pathname": "/dad-ready-assessment",
+      "type": "assessment"
+    }
+  ]
+}

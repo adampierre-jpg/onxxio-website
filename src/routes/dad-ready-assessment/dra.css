@@ -1,0 +1,819 @@
+/* Scope all styles to prevent Squarespace conflicts */
+    #dra-assessment-wrapper {
+        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        line-height: 1.6 !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    #dra-assessment-wrapper *,
+    #dra-assessment-wrapper *::before,
+    #dra-assessment-wrapper *::after {
+        box-sizing: border-box !important;
+    }
+
+    #dra-assessment-wrapper .dra-container {
+        max-width: 720px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+
+    /* Background texture */
+    #dra-assessment-wrapper::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: 
+            radial-gradient(ellipse at 50% 0%, rgba(139, 0, 0, 0.12) 0%, transparent 60%),
+            radial-gradient(ellipse at 20% 50%, rgba(74, 0, 0, 0.06) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 80%, rgba(74, 0, 0, 0.05) 0%, transparent 50%) !important;
+        pointer-events: none !important;
+        z-index: 0 !important;
+    }
+
+    /* Header / Hero Section */
+    #dra-assessment-wrapper .dra-header {
+        text-align: center !important;
+        padding: 60px 20px 50px 20px !important;
+        position: relative !important;
+        z-index: 1 !important;
+        background: linear-gradient(180deg, rgba(74, 0, 0, 0.15) 0%, transparent 100%) !important;
+        border-bottom: 1px solid rgba(139, 0, 0, 0.2) !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-logo {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1rem !important;
+        letter-spacing: 3px !important;
+        color: #8B0000 !important;
+        margin-bottom: 16px !important;
+        text-transform: uppercase !important;
+    }
+
+    #dra-assessment-wrapper .dra-header h1 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: clamp(3rem, 10vw, 5rem) !important;
+        letter-spacing: 4px !important;
+        margin: 0 0 20px 0 !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+        line-height: 1.05 !important;
+        text-shadow: 0 4px 30px rgba(139, 0, 0, 0.3) !important;
+    }
+
+    #dra-assessment-wrapper .dra-subhead {
+        font-size: 1.25rem !important;
+        color: #e0e0e0 !important;
+        max-width: 580px !important;
+        margin: 0 auto 32px auto !important;
+        line-height: 1.6 !important;
+        font-weight: 400 !important;
+    }
+
+    #dra-assessment-wrapper .dra-time-badge {
+        display: inline-block !important;
+        background: rgba(139, 0, 0, 0.25) !important;
+        border: 1px solid rgba(139, 0, 0, 0.4) !important;
+        padding: 8px 20px !important;
+        border-radius: 50px !important;
+        font-size: 0.85rem !important;
+        color: #ffffff !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 28px !important;
+        font-weight: 600 !important;
+    }
+
+    #dra-assessment-wrapper .dra-benefits {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        text-align: left !important;
+        max-width: 420px !important;
+        margin: 0 auto 36px auto !important;
+        list-style: none !important;
+        padding: 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-benefit-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+        font-size: 1.05rem !important;
+        color: #d0d0d0 !important;
+        line-height: 1.5 !important;
+    }
+
+    #dra-assessment-wrapper .dra-benefit-item::before {
+        content: '\\2713' !important;
+        color: #8B0000 !important;
+        font-weight: bold !important;
+        font-size: 1.1rem !important;
+        background: rgba(139, 0, 0, 0.2) !important;
+        width: 26px !important;
+        height: 26px !important;
+        min-width: 26px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        margin-top: 2px !important;
+    }
+
+    #dra-assessment-wrapper .dra-hero-cta {
+        margin-top: 10px !important;
+    }
+
+    #dra-assessment-wrapper .dra-hero-cta .dra-btn-primary {
+        padding: 20px 48px !important;
+        font-size: 1.15rem !important;
+        letter-spacing: 1px !important;
+        border-radius: 10px !important;
+        box-shadow: 0 6px 25px rgba(74, 0, 0, 0.5) !important;
+    }
+
+    #dra-assessment-wrapper .dra-hero-cta .dra-btn-primary:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 35px rgba(74, 0, 0, 0.6) !important;
+    }
+
+    #dra-assessment-wrapper .dra-trust-line {
+        margin-top: 20px !important;
+        font-size: 0.85rem !important;
+        color: #666666 !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    /* Video Container */
+    #dra-assessment-wrapper .dra-video-container {
+        position: relative !important;
+        padding-bottom: 56.25% !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        background: #141414 !important;
+        border-radius: 12px !important;
+        margin: 32px auto !important;
+        max-width: 640px !important;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(139, 0, 0, 0.2) !important;
+    }
+
+    #dra-assessment-wrapper .dra-video-container iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+    }
+
+    /* Progress Bar */
+    #dra-assessment-wrapper .dra-progress-container {
+        margin: 30px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-bar {
+        height: 4px !important;
+        background: #2a2a2a !important;
+        border-radius: 2px !important;
+        overflow: hidden !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-fill {
+        height: 100% !important;
+        background: linear-gradient(90deg, #4A0000, #8B0000) !important;
+        border-radius: 2px !important;
+        transition: width 0.5s ease !important;
+        width: 0% !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-steps {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 12px !important;
+        font-size: 0.75rem !important;
+        color: #666666 !important;
+        list-style: none !important;
+        padding: 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-step {
+        transition: color 0.3s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-step.active {
+        color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-step.completed {
+        color: #b0b0b0 !important;
+    }
+
+    /* Cards / Steps */
+    #dra-assessment-wrapper .dra-step {
+        display: none !important;
+        animation: draFadeIn 0.4s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-step.active {
+        display: block !important;
+    }
+
+    @keyframes draFadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    #dra-assessment-wrapper .dra-card {
+        background: #1a1a1a !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 16px !important;
+        padding: 32px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-card-header {
+        margin-bottom: 24px !important;
+    }
+
+    #dra-assessment-wrapper .dra-card h2 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1.8rem !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 8px 0 !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+    }
+
+    #dra-assessment-wrapper .dra-card-subtitle {
+        color: #b0b0b0 !important;
+        font-size: 0.95rem !important;
+        margin: 0 !important;
+    }
+
+    /* Form Elements */
+    #dra-assessment-wrapper .dra-form-group {
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-form-group label {
+        display: block !important;
+        margin-bottom: 8px !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-form-group .dra-hint {
+        font-size: 0.85rem !important;
+        color: #666666 !important;
+        margin-top: 4px !important;
+    }
+
+    #dra-assessment-wrapper input[type="text"],
+    #dra-assessment-wrapper input[type="email"],
+    #dra-assessment-wrapper input[type="number"],
+    #dra-assessment-wrapper select {
+        width: 100% !important;
+        padding: 14px 16px !important;
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 8px !important;
+        color: #ffffff !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+    }
+
+    #dra-assessment-wrapper input:focus,
+    #dra-assessment-wrapper select:focus {
+        outline: none !important;
+        border-color: #8B0000 !important;
+        box-shadow: 0 0 0 3px rgba(74, 0, 0, 0.4) !important;
+    }
+
+    #dra-assessment-wrapper select {
+        cursor: pointer !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23b0b0b0' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 16px center !important;
+    }
+
+    /* Option Buttons */
+    #dra-assessment-wrapper .dra-option-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 14px 18px !important;
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn:hover {
+        border-color: #8B0000 !important;
+        background: rgba(74, 0, 0, 0.1) !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected {
+        border-color: #8B0000 !important;
+        background: rgba(74, 0, 0, 0.2) !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn input {
+        display: none !important;
+    }
+
+    #dra-assessment-wrapper .dra-radio-indicator {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        border: 2px solid #2a2a2a !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-radio-indicator {
+        border-color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-radio-indicator::after {
+        content: '' !important;
+        width: 10px !important;
+        height: 10px !important;
+        background: #8B0000 !important;
+        border-radius: 50% !important;
+    }
+
+    #dra-assessment-wrapper .dra-checkbox-indicator {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        border: 2px solid #2a2a2a !important;
+        border-radius: 4px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-checkbox-indicator {
+        border-color: #8B0000 !important;
+        background: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-checkbox-indicator::after {
+        content: '\\2713' !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+    }
+
+    /* Scale Buttons */
+    #dra-assessment-wrapper .dra-scale-group {
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-question {
+        font-weight: 600 !important;
+        margin-bottom: 12px !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-options {
+        display: flex !important;
+        gap: 10px !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-btn {
+        flex: 1 !important;
+        padding: 12px 8px !important;
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        text-align: center !important;
+        transition: all 0.3s ease !important;
+        color: #ffffff !important;
+        font-size: 1rem !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-btn:hover {
+        border-color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-btn.selected {
+        border-color: #8B0000 !important;
+        background: #4A0000 !important;
+        color: white !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-labels {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 6px !important;
+        font-size: 0.75rem !important;
+        color: #666666 !important;
+    }
+
+    /* Movement Test Cards */
+    #dra-assessment-wrapper .dra-movement-test {
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        margin-bottom: 16px !important;
+    }
+
+    #dra-assessment-wrapper .dra-movement-test h4 {
+        color: #8B0000 !important;
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 8px 0 !important;
+        font-size: 1.1rem !important;
+    }
+
+    #dra-assessment-wrapper .dra-movement-test p {
+        color: #b0b0b0 !important;
+        font-size: 0.9rem !important;
+        margin: 0 0 8px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-movement-test p:last-child {
+        margin-bottom: 0 !important;
+        font-style: italic !important;
+        color: #666666 !important;
+    }
+
+    /* Timer */
+    #dra-assessment-wrapper .dra-timer-container {
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 12px !important;
+        padding: 24px !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-display {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 4rem !important;
+        color: #8B0000 !important;
+        margin-bottom: 16px !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-controls {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn {
+        padding: 10px 24px !important;
+        background: #4A0000 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 6px !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        transition: all 0.2s !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn:hover {
+        background: #6B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn.secondary {
+        background: transparent !important;
+        border: 1px solid #2a2a2a !important;
+        color: #b0b0b0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn.secondary:hover {
+        border-color: #8B0000 !important;
+        color: #8B0000 !important;
+    }
+
+    /* Buttons */
+    #dra-assessment-wrapper .dra-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 16px 32px !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        border: none !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-primary {
+        background: linear-gradient(135deg, #4A0000, #6B0000) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(74, 0, 0, 0.4) !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-primary:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(74, 0, 0, 0.4) !important;
+        background: linear-gradient(135deg, #6B0000, #8B0000) !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-secondary {
+        background: transparent !important;
+        color: #b0b0b0 !important;
+        border: 1px solid #2a2a2a !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-secondary:hover {
+        border-color: #8B0000 !important;
+        color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-block {
+        width: 100% !important;
+    }
+
+    /* Instructions Box */
+    #dra-assessment-wrapper .dra-instructions-box {
+        background: #141414 !important;
+        border-left: 3px solid #8B0000 !important;
+        border-radius: 0 8px 8px 0 !important;
+        padding: 16px 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box h4 {
+        color: #8B0000 !important;
+        font-size: 0.9rem !important;
+        margin: 0 0 8px 0 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box ul {
+        list-style: none !important;
+        color: #b0b0b0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box li {
+        padding: 4px 0 4px 20px !important;
+        position: relative !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box li::before {
+        content: '\\2022' !important;
+        color: #8B0000 !important;
+        position: absolute !important;
+        left: 0 !important;
+    }
+
+    /* Divider */
+    #dra-assessment-wrapper .dra-divider {
+        border: none !important;
+        border-top: 1px solid #2a2a2a !important;
+        margin: 24px 0 !important;
+    }
+
+    /* Results */
+    #dra-assessment-wrapper .dra-results-container {
+        text-align: center !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-level {
+        display: inline-block !important;
+        padding: 8px 24px !important;
+        background: #4A0000 !important;
+        border-radius: 50px !important;
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1rem !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 16px !important;
+        color: white !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-score {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 5rem !important;
+        color: #8B0000 !important;
+        line-height: 1 !important;
+        margin-bottom: 8px !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-title {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 2rem !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 16px 0 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-description {
+        color: #b0b0b0 !important;
+        margin-bottom: 32px !important;
+        line-height: 1.7 !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-breakdown {
+        background: #141414 !important;
+        border-radius: 12px !important;
+        padding: 24px !important;
+        margin-bottom: 24px !important;
+        text-align: left !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-breakdown h4 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 16px 0 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-item {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid #2a2a2a !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-item:last-child {
+        border-bottom: none !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-label {
+        color: #b0b0b0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value {
+        font-weight: 600 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value.good {
+        color: #27ae60 !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value.warning {
+        color: #f1c40f !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value.poor {
+        color: #e74c3c !important;
+    }
+
+    /* Feedback Box */
+    #dra-assessment-wrapper .dra-feedback-box {
+        background: #141414 !important;
+        border-left: 4px solid #8B0000 !important;
+        border-radius: 0 12px 12px 0 !important;
+        padding: 24px !important;
+        margin-bottom: 24px !important;
+    }
+
+    #dra-assessment-wrapper .dra-feedback-box h3 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 12px 0 !important;
+        color: #ffffff !important;
+        font-size: 1.2rem !important;
+    }
+
+    #dra-assessment-wrapper .dra-feedback-box p {
+        color: #b0b0b0 !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-feedback-box p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* CTA Section */
+    #dra-assessment-wrapper .dra-cta-section {
+        background: linear-gradient(135deg, rgba(74, 0, 0, 0.2), rgba(74, 0, 0, 0.1)) !important;
+        border: 1px solid #4A0000 !important;
+        border-radius: 16px !important;
+        padding: 32px !important;
+        text-align: center !important;
+    }
+
+    #dra-assessment-wrapper .dra-cta-section h3 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1.5rem !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 12px 0 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-cta-section p {
+        color: #b0b0b0 !important;
+        margin: 0 0 20px 0 !important;
+    }
+
+    /* Modal */
+    #dra-assessment-wrapper .dra-modal-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        display: none !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 10000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-overlay.active {
+        display: flex !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-content {
+        background: #1a1a1a !important;
+        border: 1px solid #2a2a2a !important;
+        padding: 32px !important;
+        border-radius: 16px !important;
+        max-width: 500px !important;
+        width: 90% !important;
+        text-align: center !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-content h3 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        color: #8B0000 !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-content p {
+        color: #b0b0b0 !important;
+        margin: 0 0 12px 0 !important;
+    }
+
+    /* Footer */
+    #dra-assessment-wrapper .dra-footer {
+        text-align: center !important;
+        padding: 40px 20px !important;
+        color: #666666 !important;
+        font-size: 0.85rem !important;
+    }
+
+    #dra-assessment-wrapper .dra-footer a {
+        color: #8B0000 !important;
+        text-decoration: none !important;
+    }
+
+    /* Utility */
+    #dra-assessment-wrapper .dra-hidden {
+        display: none !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        #dra-assessment-wrapper .dra-card {
+            padding: 24px 20px !important;
+        }
+
+        #dra-assessment-wrapper .dra-scale-options {
+            gap: 6px !important;
+        }
+
+        #dra-assessment-wrapper .dra-scale-btn {
+            padding: 10px 6px !important;
+            font-size: 0.9rem !important;
+        }
+
+        #dra-assessment-wrapper .dra-timer-display {
+            font-size: 3rem !important;
+        }
+    }
+

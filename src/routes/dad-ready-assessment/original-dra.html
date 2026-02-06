@@ -1,0 +1,1624 @@
+<!-- DAD READY ASSESSMENT - Squarespace Code Block Version -->
+<!-- Paste this entire code into a Squarespace Code Block -->
+
+<style>
+    /* Scope all styles to prevent Squarespace conflicts */
+    #dra-assessment-wrapper {
+        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background: #0a0a0a !important;
+        color: #ffffff !important;
+        line-height: 1.6 !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    #dra-assessment-wrapper *,
+    #dra-assessment-wrapper *::before,
+    #dra-assessment-wrapper *::after {
+        box-sizing: border-box !important;
+    }
+
+    #dra-assessment-wrapper .dra-container {
+        max-width: 720px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+
+    /* Background texture */
+    #dra-assessment-wrapper::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: 
+            radial-gradient(ellipse at 50% 0%, rgba(139, 0, 0, 0.12) 0%, transparent 60%),
+            radial-gradient(ellipse at 20% 50%, rgba(74, 0, 0, 0.06) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 80%, rgba(74, 0, 0, 0.05) 0%, transparent 50%) !important;
+        pointer-events: none !important;
+        z-index: 0 !important;
+    }
+
+    /* Header / Hero Section */
+    #dra-assessment-wrapper .dra-header {
+        text-align: center !important;
+        padding: 60px 20px 50px 20px !important;
+        position: relative !important;
+        z-index: 1 !important;
+        background: linear-gradient(180deg, rgba(74, 0, 0, 0.15) 0%, transparent 100%) !important;
+        border-bottom: 1px solid rgba(139, 0, 0, 0.2) !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-logo {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1rem !important;
+        letter-spacing: 3px !important;
+        color: #8B0000 !important;
+        margin-bottom: 16px !important;
+        text-transform: uppercase !important;
+    }
+
+    #dra-assessment-wrapper .dra-header h1 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: clamp(3rem, 10vw, 5rem) !important;
+        letter-spacing: 4px !important;
+        margin: 0 0 20px 0 !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+        line-height: 1.05 !important;
+        text-shadow: 0 4px 30px rgba(139, 0, 0, 0.3) !important;
+    }
+
+    #dra-assessment-wrapper .dra-subhead {
+        font-size: 1.25rem !important;
+        color: #e0e0e0 !important;
+        max-width: 580px !important;
+        margin: 0 auto 32px auto !important;
+        line-height: 1.6 !important;
+        font-weight: 400 !important;
+    }
+
+    #dra-assessment-wrapper .dra-time-badge {
+        display: inline-block !important;
+        background: rgba(139, 0, 0, 0.25) !important;
+        border: 1px solid rgba(139, 0, 0, 0.4) !important;
+        padding: 8px 20px !important;
+        border-radius: 50px !important;
+        font-size: 0.85rem !important;
+        color: #ffffff !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 28px !important;
+        font-weight: 600 !important;
+    }
+
+    #dra-assessment-wrapper .dra-benefits {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        text-align: left !important;
+        max-width: 420px !important;
+        margin: 0 auto 36px auto !important;
+        list-style: none !important;
+        padding: 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-benefit-item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+        font-size: 1.05rem !important;
+        color: #d0d0d0 !important;
+        line-height: 1.5 !important;
+    }
+
+    #dra-assessment-wrapper .dra-benefit-item::before {
+        content: '✓' !important;
+        color: #8B0000 !important;
+        font-weight: bold !important;
+        font-size: 1.1rem !important;
+        background: rgba(139, 0, 0, 0.2) !important;
+        width: 26px !important;
+        height: 26px !important;
+        min-width: 26px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        margin-top: 2px !important;
+    }
+
+    #dra-assessment-wrapper .dra-hero-cta {
+        margin-top: 10px !important;
+    }
+
+    #dra-assessment-wrapper .dra-hero-cta .dra-btn-primary {
+        padding: 20px 48px !important;
+        font-size: 1.15rem !important;
+        letter-spacing: 1px !important;
+        border-radius: 10px !important;
+        box-shadow: 0 6px 25px rgba(74, 0, 0, 0.5) !important;
+    }
+
+    #dra-assessment-wrapper .dra-hero-cta .dra-btn-primary:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 35px rgba(74, 0, 0, 0.6) !important;
+    }
+
+    #dra-assessment-wrapper .dra-trust-line {
+        margin-top: 20px !important;
+        font-size: 0.85rem !important;
+        color: #666666 !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    /* Video Container */
+    #dra-assessment-wrapper .dra-video-container {
+        position: relative !important;
+        padding-bottom: 56.25% !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        background: #141414 !important;
+        border-radius: 12px !important;
+        margin: 32px auto !important;
+        max-width: 640px !important;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(139, 0, 0, 0.2) !important;
+    }
+
+    #dra-assessment-wrapper .dra-video-container iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+    }
+
+    /* Progress Bar */
+    #dra-assessment-wrapper .dra-progress-container {
+        margin: 30px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-bar {
+        height: 4px !important;
+        background: #2a2a2a !important;
+        border-radius: 2px !important;
+        overflow: hidden !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-fill {
+        height: 100% !important;
+        background: linear-gradient(90deg, #4A0000, #8B0000) !important;
+        border-radius: 2px !important;
+        transition: width 0.5s ease !important;
+        width: 0% !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-steps {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 12px !important;
+        font-size: 0.75rem !important;
+        color: #666666 !important;
+        list-style: none !important;
+        padding: 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-step {
+        transition: color 0.3s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-step.active {
+        color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-progress-step.completed {
+        color: #b0b0b0 !important;
+    }
+
+    /* Cards / Steps */
+    #dra-assessment-wrapper .dra-step {
+        display: none !important;
+        animation: draFadeIn 0.4s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-step.active {
+        display: block !important;
+    }
+
+    @keyframes draFadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    #dra-assessment-wrapper .dra-card {
+        background: #1a1a1a !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 16px !important;
+        padding: 32px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-card-header {
+        margin-bottom: 24px !important;
+    }
+
+    #dra-assessment-wrapper .dra-card h2 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1.8rem !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 8px 0 !important;
+        color: #ffffff !important;
+        text-transform: uppercase !important;
+    }
+
+    #dra-assessment-wrapper .dra-card-subtitle {
+        color: #b0b0b0 !important;
+        font-size: 0.95rem !important;
+        margin: 0 !important;
+    }
+
+    /* Form Elements */
+    #dra-assessment-wrapper .dra-form-group {
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-form-group label {
+        display: block !important;
+        margin-bottom: 8px !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-form-group .dra-hint {
+        font-size: 0.85rem !important;
+        color: #666666 !important;
+        margin-top: 4px !important;
+    }
+
+    #dra-assessment-wrapper input[type="text"],
+    #dra-assessment-wrapper input[type="email"],
+    #dra-assessment-wrapper input[type="number"],
+    #dra-assessment-wrapper select {
+        width: 100% !important;
+        padding: 14px 16px !important;
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 8px !important;
+        color: #ffffff !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+    }
+
+    #dra-assessment-wrapper input:focus,
+    #dra-assessment-wrapper select:focus {
+        outline: none !important;
+        border-color: #8B0000 !important;
+        box-shadow: 0 0 0 3px rgba(74, 0, 0, 0.4) !important;
+    }
+
+    #dra-assessment-wrapper select {
+        cursor: pointer !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23b0b0b0' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 16px center !important;
+    }
+
+    /* Option Buttons */
+    #dra-assessment-wrapper .dra-option-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 14px 18px !important;
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn:hover {
+        border-color: #8B0000 !important;
+        background: rgba(74, 0, 0, 0.1) !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected {
+        border-color: #8B0000 !important;
+        background: rgba(74, 0, 0, 0.2) !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn input {
+        display: none !important;
+    }
+
+    #dra-assessment-wrapper .dra-radio-indicator {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        border: 2px solid #2a2a2a !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-radio-indicator {
+        border-color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-radio-indicator::after {
+        content: '' !important;
+        width: 10px !important;
+        height: 10px !important;
+        background: #8B0000 !important;
+        border-radius: 50% !important;
+    }
+
+    #dra-assessment-wrapper .dra-checkbox-indicator {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        border: 2px solid #2a2a2a !important;
+        border-radius: 4px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-checkbox-indicator {
+        border-color: #8B0000 !important;
+        background: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-option-btn.selected .dra-checkbox-indicator::after {
+        content: '✓' !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+    }
+
+    /* Scale Buttons */
+    #dra-assessment-wrapper .dra-scale-group {
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-question {
+        font-weight: 600 !important;
+        margin-bottom: 12px !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-options {
+        display: flex !important;
+        gap: 10px !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-btn {
+        flex: 1 !important;
+        padding: 12px 8px !important;
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        text-align: center !important;
+        transition: all 0.3s ease !important;
+        color: #ffffff !important;
+        font-size: 1rem !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-btn:hover {
+        border-color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-btn.selected {
+        border-color: #8B0000 !important;
+        background: #4A0000 !important;
+        color: white !important;
+    }
+
+    #dra-assessment-wrapper .dra-scale-labels {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 6px !important;
+        font-size: 0.75rem !important;
+        color: #666666 !important;
+    }
+
+    /* Movement Test Cards */
+    #dra-assessment-wrapper .dra-movement-test {
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        margin-bottom: 16px !important;
+    }
+
+    #dra-assessment-wrapper .dra-movement-test h4 {
+        color: #8B0000 !important;
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 8px 0 !important;
+        font-size: 1.1rem !important;
+    }
+
+    #dra-assessment-wrapper .dra-movement-test p {
+        color: #b0b0b0 !important;
+        font-size: 0.9rem !important;
+        margin: 0 0 8px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-movement-test p:last-child {
+        margin-bottom: 0 !important;
+        font-style: italic !important;
+        color: #666666 !important;
+    }
+
+    /* Timer */
+    #dra-assessment-wrapper .dra-timer-container {
+        background: #141414 !important;
+        border: 1px solid #2a2a2a !important;
+        border-radius: 12px !important;
+        padding: 24px !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-display {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 4rem !important;
+        color: #8B0000 !important;
+        margin-bottom: 16px !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-controls {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn {
+        padding: 10px 24px !important;
+        background: #4A0000 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 6px !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        transition: all 0.2s !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn:hover {
+        background: #6B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn.secondary {
+        background: transparent !important;
+        border: 1px solid #2a2a2a !important;
+        color: #b0b0b0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-timer-btn.secondary:hover {
+        border-color: #8B0000 !important;
+        color: #8B0000 !important;
+    }
+
+    /* Buttons */
+    #dra-assessment-wrapper .dra-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 16px 32px !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        border: none !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-primary {
+        background: linear-gradient(135deg, #4A0000, #6B0000) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(74, 0, 0, 0.4) !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-primary:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(74, 0, 0, 0.4) !important;
+        background: linear-gradient(135deg, #6B0000, #8B0000) !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-secondary {
+        background: transparent !important;
+        color: #b0b0b0 !important;
+        border: 1px solid #2a2a2a !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-secondary:hover {
+        border-color: #8B0000 !important;
+        color: #8B0000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-btn-block {
+        width: 100% !important;
+    }
+
+    /* Instructions Box */
+    #dra-assessment-wrapper .dra-instructions-box {
+        background: #141414 !important;
+        border-left: 3px solid #8B0000 !important;
+        border-radius: 0 8px 8px 0 !important;
+        padding: 16px 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box h4 {
+        color: #8B0000 !important;
+        font-size: 0.9rem !important;
+        margin: 0 0 8px 0 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box ul {
+        list-style: none !important;
+        color: #b0b0b0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box li {
+        padding: 4px 0 4px 20px !important;
+        position: relative !important;
+    }
+
+    #dra-assessment-wrapper .dra-instructions-box li::before {
+        content: '•' !important;
+        color: #8B0000 !important;
+        position: absolute !important;
+        left: 0 !important;
+    }
+
+    /* Divider */
+    #dra-assessment-wrapper .dra-divider {
+        border: none !important;
+        border-top: 1px solid #2a2a2a !important;
+        margin: 24px 0 !important;
+    }
+
+    /* Results */
+    #dra-assessment-wrapper .dra-results-container {
+        text-align: center !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-level {
+        display: inline-block !important;
+        padding: 8px 24px !important;
+        background: #4A0000 !important;
+        border-radius: 50px !important;
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1rem !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 16px !important;
+        color: white !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-score {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 5rem !important;
+        color: #8B0000 !important;
+        line-height: 1 !important;
+        margin-bottom: 8px !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-title {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 2rem !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 16px 0 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-description {
+        color: #b0b0b0 !important;
+        margin-bottom: 32px !important;
+        line-height: 1.7 !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-breakdown {
+        background: #141414 !important;
+        border-radius: 12px !important;
+        padding: 24px !important;
+        margin-bottom: 24px !important;
+        text-align: left !important;
+    }
+
+    #dra-assessment-wrapper .dra-results-breakdown h4 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 16px 0 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-item {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid #2a2a2a !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-item:last-child {
+        border-bottom: none !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-label {
+        color: #b0b0b0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value {
+        font-weight: 600 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value.good {
+        color: #27ae60 !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value.warning {
+        color: #f1c40f !important;
+    }
+
+    #dra-assessment-wrapper .dra-breakdown-value.poor {
+        color: #e74c3c !important;
+    }
+
+    /* Feedback Box */
+    #dra-assessment-wrapper .dra-feedback-box {
+        background: #141414 !important;
+        border-left: 4px solid #8B0000 !important;
+        border-radius: 0 12px 12px 0 !important;
+        padding: 24px !important;
+        margin-bottom: 24px !important;
+    }
+
+    #dra-assessment-wrapper .dra-feedback-box h3 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 12px 0 !important;
+        color: #ffffff !important;
+        font-size: 1.2rem !important;
+    }
+
+    #dra-assessment-wrapper .dra-feedback-box p {
+        color: #b0b0b0 !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-feedback-box p:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* CTA Section */
+    #dra-assessment-wrapper .dra-cta-section {
+        background: linear-gradient(135deg, rgba(74, 0, 0, 0.2), rgba(74, 0, 0, 0.1)) !important;
+        border: 1px solid #4A0000 !important;
+        border-radius: 16px !important;
+        padding: 32px !important;
+        text-align: center !important;
+    }
+
+    #dra-assessment-wrapper .dra-cta-section h3 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        font-size: 1.5rem !important;
+        letter-spacing: 1px !important;
+        margin: 0 0 12px 0 !important;
+        color: #ffffff !important;
+    }
+
+    #dra-assessment-wrapper .dra-cta-section p {
+        color: #b0b0b0 !important;
+        margin: 0 0 20px 0 !important;
+    }
+
+    /* Modal */
+    #dra-assessment-wrapper .dra-modal-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        display: none !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 10000 !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-overlay.active {
+        display: flex !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-content {
+        background: #1a1a1a !important;
+        border: 1px solid #2a2a2a !important;
+        padding: 32px !important;
+        border-radius: 16px !important;
+        max-width: 500px !important;
+        width: 90% !important;
+        text-align: center !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-content h3 {
+        font-family: 'Bebas Neue', 'Arial Black', sans-serif !important;
+        color: #8B0000 !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    #dra-assessment-wrapper .dra-modal-content p {
+        color: #b0b0b0 !important;
+        margin: 0 0 12px 0 !important;
+    }
+
+    /* Footer */
+    #dra-assessment-wrapper .dra-footer {
+        text-align: center !important;
+        padding: 40px 20px !important;
+        color: #666666 !important;
+        font-size: 0.85rem !important;
+    }
+
+    #dra-assessment-wrapper .dra-footer a {
+        color: #8B0000 !important;
+        text-decoration: none !important;
+    }
+
+    /* Utility */
+    #dra-assessment-wrapper .dra-hidden {
+        display: none !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        #dra-assessment-wrapper .dra-card {
+            padding: 24px 20px !important;
+        }
+
+        #dra-assessment-wrapper .dra-scale-options {
+            gap: 6px !important;
+        }
+
+        #dra-assessment-wrapper .dra-scale-btn {
+            padding: 10px 6px !important;
+            font-size: 0.9rem !important;
+        }
+
+        #dra-assessment-wrapper .dra-timer-display {
+            font-size: 3rem !important;
+        }
+    }
+</style>
+
+<!-- Load Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<div id="dra-assessment-wrapper">
+    <div class="dra-container">
+        <!-- Header / Hero -->
+        <header class="dra-header" id="dra-intro-section">
+            <div class="dra-logo">ESSENTIAL FITNESS</div>
+            <h1>Dad Ready Assessment</h1>
+            <p class="dra-subhead">Most men over 35 don't have a training problem — they have an awareness problem. Find out exactly where you stand.</p>
+            
+            <div class="dra-time-badge">⏱ Takes under 10 minutes</div>
+
+            <!-- Intro Video -->
+            <div class="dra-video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_INTRO?rel=0" title="Intro Video" allowfullscreen></iframe>
+            </div>
+
+            <div class="dra-benefits">
+                <div class="dra-benefit-item">Check your nervous system & breathing capacity</div>
+                <div class="dra-benefit-item">Test 4 fundamental movement patterns</div>
+                <div class="dra-benefit-item">Get a personalized reset & see immediate change</div>
+            </div>
+            
+            <div class="dra-hero-cta">
+                <button class="dra-btn dra-btn-primary" onclick="draStartAssessment()">Start Your Assessment</button>
+                <p class="dra-trust-line">No equipment needed. Do it right where you are.</p>
+            </div>
+        </header>
+
+        <!-- Assessment Form -->
+        <div id="dra-assessment-form" class="dra-hidden">
+            <!-- Progress Bar -->
+            <div class="dra-progress-container">
+                <div class="dra-progress-bar">
+                    <div class="dra-progress-fill" id="dra-progress-fill"></div>
+                </div>
+                <div class="dra-progress-steps">
+                    <span class="dra-progress-step active" data-step="1">Basics</span>
+                    <span class="dra-progress-step" data-step="2">Breathing</span>
+                    <span class="dra-progress-step" data-step="3">Pain</span>
+                    <span class="dra-progress-step" data-step="4">Movement</span>
+                    <span class="dra-progress-step" data-step="5">Reset</span>
+                    <span class="dra-progress-step" data-step="6">Results</span>
+                </div>
+            </div>
+
+            <!-- Step 1: The Basics -->
+            <div class="dra-step active" id="dra-step-1">
+                <div class="dra-card">
+                    <div class="dra-card-header">
+                        <h2>The Basics</h2>
+                        <p class="dra-card-subtitle">Context matters. Tell us where you're starting.</p>
+                    </div>
+                    
+                    <div class="dra-form-group">
+                        <label for="dra-name">Name</label>
+                        <input type="text" id="dra-name" placeholder="Your first name">
+                    </div>
+
+                    <div class="dra-form-group">
+                        <label for="dra-email">Email</label>
+                        <input type="email" id="dra-email" placeholder="Where to send your report">
+                    </div>
+
+                    <div class="dra-form-group">
+                        <label for="dra-age">Age</label>
+                        <input type="number" id="dra-age" placeholder="35" min="18" max="100">
+                    </div>
+
+                    <div class="dra-form-group">
+                        <label>Do you have kids under 12?</label>
+                        <div class="dra-option-group">
+                            <div class="dra-option-btn" data-name="kids" data-value="yes" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-kids" value="yes">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Yes — the chaotic years</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="kids" data-value="no" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-kids" value="no">
+                                <span class="dra-radio-indicator"></span>
+                                <span>No — older kids or none</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dra-form-group">
+                        <label for="dra-work-type">Work Type <span style="color: #666666; font-weight: normal;">(impacts stiffness)</span></label>
+                        <select id="dra-work-type">
+                            <option value="">Select one...</option>
+                            <option value="desk">Mostly Desk / Computer</option>
+                            <option value="mixed">Mix of Desk & Active</option>
+                            <option value="physical">Mostly Physical / Manual Work</option>
+                        </select>
+                    </div>
+
+                    <button class="dra-btn dra-btn-primary dra-btn-block" onclick="draNextStep(2)">Next Step</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Nervous System Check -->
+            <div class="dra-step" id="dra-step-2">
+                <div class="dra-card">
+                    <div class="dra-card-header">
+                        <h2>Nervous System Check</h2>
+                        <p class="dra-card-subtitle">Breathing dictates stability. Be honest — this isn't a test you can fail.</p>
+                    </div>
+
+                    <p style="color: #666666; font-size: 0.9rem; margin-bottom: 20px;">Rate each: <strong style="color: #ffffff;">0 = Never</strong> to <strong style="color: #ffffff;">3 = Very Often</strong></p>
+
+                    <div class="dra-scale-group" data-question="tension">
+                        <p class="dra-scale-question">Do you feel tense during a typical day?</p>
+                        <div class="dra-scale-options">
+                            <button class="dra-scale-btn" data-value="0" onclick="draSelectScale(this)">0</button>
+                            <button class="dra-scale-btn" data-value="1" onclick="draSelectScale(this)">1</button>
+                            <button class="dra-scale-btn" data-value="2" onclick="draSelectScale(this)">2</button>
+                            <button class="dra-scale-btn" data-value="3" onclick="draSelectScale(this)">3</button>
+                        </div>
+                        <div class="dra-scale-labels"><span>Never</span><span>Very Often</span></div>
+                    </div>
+
+                    <div class="dra-scale-group" data-question="cold-extremities">
+                        <p class="dra-scale-question">Cold hands or feet when others seem comfortable?</p>
+                        <div class="dra-scale-options">
+                            <button class="dra-scale-btn" data-value="0" onclick="draSelectScale(this)">0</button>
+                            <button class="dra-scale-btn" data-value="1" onclick="draSelectScale(this)">1</button>
+                            <button class="dra-scale-btn" data-value="2" onclick="draSelectScale(this)">2</button>
+                            <button class="dra-scale-btn" data-value="3" onclick="draSelectScale(this)">3</button>
+                        </div>
+                        <div class="dra-scale-labels"><span>Never</span><span>Very Often</span></div>
+                    </div>
+
+                    <div class="dra-scale-group" data-question="yawning">
+                        <p class="dra-scale-question">Yawning often when you're not just tired or bored?</p>
+                        <div class="dra-scale-options">
+                            <button class="dra-scale-btn" data-value="0" onclick="draSelectScale(this)">0</button>
+                            <button class="dra-scale-btn" data-value="1" onclick="draSelectScale(this)">1</button>
+                            <button class="dra-scale-btn" data-value="2" onclick="draSelectScale(this)">2</button>
+                            <button class="dra-scale-btn" data-value="3" onclick="draSelectScale(this)">3</button>
+                        </div>
+                        <div class="dra-scale-labels"><span>Never</span><span>Very Often</span></div>
+                    </div>
+
+                    <div class="dra-scale-group" data-question="mouth-breathing">
+                        <p class="dra-scale-question">Mouth breathing at night or waking with dry mouth?</p>
+                        <div class="dra-scale-options">
+                            <button class="dra-scale-btn" data-value="0" onclick="draSelectScale(this)">0</button>
+                            <button class="dra-scale-btn" data-value="1" onclick="draSelectScale(this)">1</button>
+                            <button class="dra-scale-btn" data-value="2" onclick="draSelectScale(this)">2</button>
+                            <button class="dra-scale-btn" data-value="3" onclick="draSelectScale(this)">3</button>
+                        </div>
+                        <div class="dra-scale-labels"><span>Never</span><span>Very Often</span></div>
+                    </div>
+
+                    <hr class="dra-divider">
+
+                    <div class="dra-form-group">
+                        <label>Breath Hold Test</label>
+                        <div class="dra-instructions-box">
+                            <h4>Instructions</h4>
+                            <ul>
+                                <li>Sit or stand tall, relaxed</li>
+                                <li>Take 3-5 easy breaths through your nose</li>
+                                <li>Normal inhale, then <strong style="color: #ffffff;">normal exhale</strong> through nose</li>
+                                <li>Pinch your nose and start the timer</li>
+                                <li>Stop at <strong style="color: #ffffff;">first urge to breathe</strong> (swallow, throat tightening, or mental urge)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="dra-timer-container">
+                            <div class="dra-timer-display" id="dra-timer">00:00</div>
+                            <div class="dra-timer-controls">
+                                <button class="dra-timer-btn" id="dra-timer-start" onclick="draToggleTimer()">Start</button>
+                                <button class="dra-timer-btn secondary" onclick="draResetTimer()">Reset</button>
+                            </div>
+                        </div>
+                        
+                        <label>Or enter your time manually (seconds)</label>
+                        <input type="number" id="dra-breath-hold" placeholder="e.g., 22" min="0" max="120">
+                        <p class="dra-hint">This is NOT a max effort — stop at the first clear urge to breathe.</p>
+                    </div>
+
+                    <button class="dra-btn dra-btn-primary dra-btn-block" onclick="draNextStep(3)">Next Step</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Pain Screen -->
+            <div class="dra-step" id="dra-step-3">
+                <div class="dra-card">
+                    <div class="dra-card-header">
+                        <h2>Pain & Recovery</h2>
+                        <p class="dra-card-subtitle">We build you up, not break you down. We need to know your limits.</p>
+                    </div>
+
+                    <div class="dra-form-group">
+                        <label>Right now, is there any pain that limits your movement — something that makes you avoid or alter how you move?</label>
+                        <div class="dra-option-group">
+                            <div class="dra-option-btn" data-name="has-pain" data-value="no" onclick="draTogglePain(this)">
+                                <input type="radio" name="dra-has-pain" value="no">
+                                <span class="dra-radio-indicator"></span>
+                                <span>No — I don't avoid movement because of pain</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="has-pain" data-value="yes" onclick="draTogglePain(this)">
+                                <input type="radio" name="dra-has-pain" value="yes">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Yes — pain limits certain movements</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dra-form-group dra-hidden" id="dra-pain-locations">
+                        <label>Where? (select all that apply)</label>
+                        <div class="dra-option-group">
+                            <div class="dra-option-btn checkbox" data-name="pain-area" data-value="low-back" onclick="draToggleCheckbox(this)">
+                                <input type="checkbox" name="dra-pain-area" value="low-back">
+                                <span class="dra-checkbox-indicator"></span>
+                                <span>Low Back</span>
+                            </div>
+                            <div class="dra-option-btn checkbox" data-name="pain-area" data-value="knees" onclick="draToggleCheckbox(this)">
+                                <input type="checkbox" name="dra-pain-area" value="knees">
+                                <span class="dra-checkbox-indicator"></span>
+                                <span>Knees</span>
+                            </div>
+                            <div class="dra-option-btn checkbox" data-name="pain-area" data-value="hips" onclick="draToggleCheckbox(this)">
+                                <input type="checkbox" name="dra-pain-area" value="hips">
+                                <span class="dra-checkbox-indicator"></span>
+                                <span>Hips</span>
+                            </div>
+                            <div class="dra-option-btn checkbox" data-name="pain-area" data-value="shoulders" onclick="draToggleCheckbox(this)">
+                                <input type="checkbox" name="dra-pain-area" value="shoulders">
+                                <span class="dra-checkbox-indicator"></span>
+                                <span>Shoulders</span>
+                            </div>
+                            <div class="dra-option-btn checkbox" data-name="pain-area" data-value="neck" onclick="draToggleCheckbox(this)">
+                                <input type="checkbox" name="dra-pain-area" value="neck">
+                                <span class="dra-checkbox-indicator"></span>
+                                <span>Neck</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dra-btn dra-btn-primary dra-btn-block" onclick="draNextStep(4)">Go to Movement Screen</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Movement Tests -->
+            <div class="dra-step" id="dra-step-4">
+                <div class="dra-card">
+                    <div class="dra-card-header">
+                        <h2>Movement Screen</h2>
+                        <p class="dra-card-subtitle">Watch the demo video, then test these 4 movements right now. All standing — no equipment needed.</p>
+                    </div>
+
+                    <div class="dra-video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_MOVEMENT?rel=0" title="Movement Demo" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="dra-movement-test">
+                        <h4>1. Toe Touch Series</h4>
+                        <p>Stand with feet together. Bend forward and reach for your toes. Then try split stance: left foot forward, reach to each toe. Switch feet and repeat.</p>
+                        <p><strong style="color: #ffffff;">Notice:</strong> Where do you feel tight? Hamstrings, calves, low back? Any left/right difference?</p>
+                    </div>
+
+                    <div class="dra-movement-test">
+                        <h4>2. Standing Rotation</h4>
+                        <p>Stand tall, heels together, palms pressed with fingers pointing straight ahead at chest level. Rotate your upper body to the left as far as comfortable, then right. Keep hips facing forward.</p>
+                        <p><strong style="color: #ffffff;">Notice:</strong> Which direction felt more restricted or blocked?</p>
+                    </div>
+
+                    <div class="dra-movement-test">
+                        <h4>3. Squat</h4>
+                        <p>Feet shoulder-width, toes slightly out. Squat as low as you can without heels lifting. Pause at bottom, then stand.</p>
+                        <p><strong style="color: #ffffff;">Notice:</strong> How deep could you go? How hard was it to stand back up?</p>
+                    </div>
+
+                    <div class="dra-movement-test">
+                        <h4>4. Forward Reach (Single-Leg)</h4>
+                        <p>Stand about 2.5 foot lengths from a wall. Keep one foot planted (heel down), reach the other foot forward to touch the wall. Return with control. Switch sides.</p>
+                        <p><strong style="color: #ffffff;">Notice:</strong> Balance stable or wobbly? Ankle restriction?</p>
+                    </div>
+
+                    <hr class="dra-divider">
+
+                    <div class="dra-form-group">
+                        <label>Which movement felt the WORST? (Most restricted, difficult, or unstable)</label>
+                        <div class="dra-option-group">
+                            <div class="dra-option-btn" data-name="worst-movement" data-value="toe-touch" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-worst-movement" value="toe-touch">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Toe Touch Series (bending forward)</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="worst-movement" data-value="rotation" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-worst-movement" value="rotation">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Standing Rotation</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="worst-movement" data-value="squat" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-worst-movement" value="squat">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Squat</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="worst-movement" data-value="forward-reach" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-worst-movement" value="forward-reach">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Forward Reach (balance)</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="worst-movement" data-value="all-ok" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-worst-movement" value="all-ok">
+                                <span class="dra-radio-indicator"></span>
+                                <span>All felt okay</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dra-btn dra-btn-primary dra-btn-block" onclick="draGoToReset()">Get The Reset</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Reset & Retest -->
+            <div class="dra-step" id="dra-step-5">
+                <div class="dra-card">
+                    <div class="dra-card-header">
+                        <h2>The Reset</h2>
+                        <p class="dra-card-subtitle">Most movement restrictions start with the nervous system. Let's reset it.</p>
+                    </div>
+
+                    <div class="dra-instructions-box">
+                        <h4>Instructions</h4>
+                        <ul>
+                            <li>Follow the video for 2 minutes</li>
+                            <li>Focus purely on nasal breathing</li>
+                            <li>Mouth closed, tongue on the roof of your mouth behind teeth</li>
+                            <li>Smooth, quiet inhales and exhales</li>
+                        </ul>
+                    </div>
+
+                    <div class="dra-video-container">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_DRILL?rel=0" title="Breathing Reset" allowfullscreen></iframe>
+                    </div>
+
+                    <button class="dra-btn dra-btn-primary dra-btn-block" onclick="draShowRetest()">I've Done It — Retest Me</button>
+                </div>
+
+                <!-- Retest Section -->
+                <div class="dra-card dra-hidden" id="dra-retest-section">
+                    <div class="dra-card-header">
+                        <h2>The Retest</h2>
+                        <p class="dra-card-subtitle">Stand up. Retest your <strong style="color: #8B0000;" id="dra-retest-movement-name">WORST movement</strong> from before.</p>
+                    </div>
+
+                    <div class="dra-form-group">
+                        <label>How does it feel now?</label>
+                        <div class="dra-option-group">
+                            <div class="dra-option-btn" data-name="retest-result" data-value="better" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-retest-result" value="better">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Better / Smoother / Easier</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="retest-result" data-value="same" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-retest-result" value="same">
+                                <span class="dra-radio-indicator"></span>
+                                <span>About the Same</span>
+                            </div>
+                            <div class="dra-option-btn" data-name="retest-result" data-value="worse" onclick="draSelectRadio(this)">
+                                <input type="radio" name="dra-retest-result" value="worse">
+                                <span class="dra-radio-indicator"></span>
+                                <span>Worse / Uncomfortable</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dra-btn dra-btn-primary dra-btn-block" onclick="draShowResults()">See My Results</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Results -->
+            <div class="dra-step" id="dra-step-6">
+                <div class="dra-card">
+                    <div class="dra-results-container">
+                        <div class="dra-results-level" id="dra-results-level">MOVEMENT READINESS</div>
+                        <div class="dra-results-score" id="dra-results-score">--</div>
+                        <h2 class="dra-results-title" id="dra-results-title">Calculating...</h2>
+                        <p class="dra-results-description" id="dra-results-description">Your personalized assessment is being compiled.</p>
+                    </div>
+
+                    <div class="dra-results-breakdown">
+                        <h4>Your Breakdown</h4>
+                        <div class="dra-breakdown-item">
+                            <span class="dra-breakdown-label">Nervous System Score</span>
+                            <span class="dra-breakdown-value" id="dra-breakdown-nervous">--</span>
+                        </div>
+                        <div class="dra-breakdown-item">
+                            <span class="dra-breakdown-label">Breath Hold Time</span>
+                            <span class="dra-breakdown-value" id="dra-breakdown-breath">--</span>
+                        </div>
+                        <div class="dra-breakdown-item">
+                            <span class="dra-breakdown-label">Pain Status</span>
+                            <span class="dra-breakdown-value" id="dra-breakdown-pain">--</span>
+                        </div>
+                        <div class="dra-breakdown-item">
+                            <span class="dra-breakdown-label">Primary Movement Limitation</span>
+                            <span class="dra-breakdown-value" id="dra-breakdown-movement">--</span>
+                        </div>
+                        <div class="dra-breakdown-item">
+                            <span class="dra-breakdown-label">Reset Response</span>
+                            <span class="dra-breakdown-value" id="dra-breakdown-reset">--</span>
+                        </div>
+                    </div>
+
+                    <div class="dra-feedback-box" id="dra-feedback-box"></div>
+
+                    <div class="dra-cta-section">
+                        <h3>Turn This Into Action</h3>
+                        <p>You've got the data. Let's turn it into a 15-minute game plan you can actually stick to.</p>
+                        <a href="https://essentialfitness.as.me/schedule/5f7120b5/appointment/40600203/calendar/10643060?appointmentTypeIds[]=40600203" class="dra-btn dra-btn-primary" target="_blank">Book Your Free 15-Min Strategy Call</a>
+                        <br><br>
+                        <button class="dra-btn dra-btn-secondary" onclick="draRetakeAssessment()">Retake Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="dra-footer">
+            <p>© <span id="dra-year"></span> <a href="https://essentialfitness.co">Essential Fitness</a>. All rights reserved.</p>
+            <p style="margin-top: 8px;">Dad Ready Assessment v2.0</p>
+        </footer>
+    </div>
+
+    <!-- Limit Modal -->
+    <div id="dra-limitModal" class="dra-modal-overlay">
+        <div class="dra-modal-content">
+            <h3>Daily Limit Reached</h3>
+            <p>You've taken the assessment 4 times today.</p>
+            <p>Instead of guessing, let's build a real plan for you.</p>
+            <a href="https://essentialfitness.as.me/schedule/5f7120b5/appointment/40600203/calendar/10643060?appointmentTypeIds[]=40600203" class="dra-btn dra-btn-primary dra-btn-block">Schedule Your 15-Min Call</a>
+            <br>
+            <button class="dra-btn dra-btn-secondary dra-btn-block" onclick="draCloseModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    // STATE
+    const draState = {
+        name: '', email: '', age: '', kids: '', workType: '',
+        tension: null, coldExtremities: null, yawning: null, mouthBreathing: null,
+        breathHold: 0, nsScore: 0, breathingCategory: 'Green',
+        hasPain: false, painAreas: [],
+        worstMovement: '', retestResult: ''
+    };
+
+    let draCurrentStep = 1;
+    let draTimerInterval = null;
+    let draTimerSeconds = 0;
+    let draTimerRunning = false;
+
+    // Initialize
+    document.getElementById('dra-year').textContent = new Date().getFullYear();
+
+    // Expose functions globally
+    window.draStartAssessment = function() {
+        const STORAGE_KEY = 'dadReady_attempts';
+        const MAX_ATTEMPTS = 4;
+        const today = new Date().toISOString().split('T')[0];
+
+        let data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        if (data.date !== today) data = { date: today, count: 0 };
+        if (data.count >= MAX_ATTEMPTS) {
+            document.getElementById('dra-limitModal').classList.add('active');
+            return;
+        }
+        data.count++;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+
+        document.getElementById('dra-intro-section').classList.add('dra-hidden');
+        document.getElementById('dra-assessment-form').classList.remove('dra-hidden');
+        document.getElementById('dra-assessment-wrapper').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    window.draCloseModal = function() {
+        document.getElementById('dra-limitModal').classList.remove('active');
+    };
+
+    window.draSelectRadio = function(element) {
+        const name = element.dataset.name;
+        document.querySelectorAll('.dra-option-btn[data-name="' + name + '"]').forEach(function(b) { b.classList.remove('selected'); });
+        element.classList.add('selected');
+        element.querySelector('input').checked = true;
+    };
+
+    window.draToggleCheckbox = function(element) {
+        element.classList.toggle('selected');
+        element.querySelector('input').checked = element.classList.contains('selected');
+    };
+
+    window.draTogglePain = function(element) {
+        draSelectRadio(element);
+        const value = element.dataset.value;
+        const painLocations = document.getElementById('dra-pain-locations');
+        if (value === 'yes') painLocations.classList.remove('dra-hidden');
+        else painLocations.classList.add('dra-hidden');
+    };
+
+    window.draSelectScale = function(btn) {
+        const group = btn.closest('.dra-scale-group');
+        const question = group.dataset.question;
+        group.querySelectorAll('.dra-scale-btn').forEach(function(b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        
+        const value = parseInt(btn.dataset.value);
+        if (question === 'tension') draState.tension = value;
+        if (question === 'cold-extremities') draState.coldExtremities = value;
+        if (question === 'yawning') draState.yawning = value;
+        if (question === 'mouth-breathing') draState.mouthBreathing = value;
+    };
+
+    // Timer
+    window.draToggleTimer = function() {
+        if (draTimerRunning) draStopTimer();
+        else draStartTimer();
+    };
+
+    function draStartTimer() {
+        draTimerRunning = true;
+        document.getElementById('dra-timer-start').textContent = 'Stop';
+        draTimerInterval = setInterval(function() {
+            draTimerSeconds++;
+            draUpdateTimerDisplay();
+        }, 1000);
+    }
+
+    function draStopTimer() {
+        draTimerRunning = false;
+        clearInterval(draTimerInterval);
+        document.getElementById('dra-timer-start').textContent = 'Start';
+        document.getElementById('dra-breath-hold').value = draTimerSeconds;
+    }
+
+    window.draResetTimer = function() {
+        draStopTimer();
+        draTimerSeconds = 0;
+        draUpdateTimerDisplay();
+        document.getElementById('dra-breath-hold').value = '';
+    };
+
+    function draUpdateTimerDisplay() {
+        const minutes = Math.floor(draTimerSeconds / 60);
+        const seconds = draTimerSeconds % 60;
+        document.getElementById('dra-timer').textContent = 
+            (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+    // Navigation
+    window.draNextStep = function(step) {
+        if (!draValidateStep(draCurrentStep)) return;
+        draSaveStepData(draCurrentStep);
+
+        document.getElementById('dra-step-' + draCurrentStep).classList.remove('active');
+        document.getElementById('dra-step-' + step).classList.add('active');
+        draCurrentStep = step;
+        draUpdateProgress();
+        document.getElementById('dra-assessment-wrapper').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    function draValidateStep(step) {
+        if (step === 1) {
+            const name = document.getElementById('dra-name').value.trim();
+            const email = document.getElementById('dra-email').value.trim();
+            const age = document.getElementById('dra-age').value;
+            const workType = document.getElementById('dra-work-type').value;
+
+            if (!name || !email || !age || !workType) { alert('Please fill in all fields'); return false; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address'); return false; }
+            if (parseInt(age) < 18 || isNaN(parseInt(age))) { alert('Please enter a valid age'); return false; }
+        }
+
+        if (step === 2) {
+            if (draState.tension === null || draState.coldExtremities === null ||
+                draState.yawning === null || draState.mouthBreathing === null) {
+                alert('Please answer all nervous system questions'); return false;
+            }
+            var breathHold = document.getElementById('dra-breath-hold').value;
+            if (!breathHold || breathHold <= 0) { alert('Please complete the breath hold test'); return false; }
+        }
+
+        if (step === 3) {
+            if (!document.querySelector('input[name="dra-has-pain"]:checked')) {
+                alert('Please indicate if you have any pain'); return false;
+            }
+        }
+
+        if (step === 4) {
+            if (!document.querySelector('input[name="dra-worst-movement"]:checked')) {
+                alert('Please select which movement felt the worst'); return false;
+            }
+        }
+
+        return true;
+    }
+
+    function draSaveStepData(step) {
+        if (step === 1) {
+            draState.name = document.getElementById('dra-name').value.trim();
+            draState.email = document.getElementById('dra-email').value.trim();
+            draState.age = document.getElementById('dra-age').value;
+            var kidsInput = document.querySelector('input[name="dra-kids"]:checked');
+            draState.kids = kidsInput ? kidsInput.value : '';
+            draState.workType = document.getElementById('dra-work-type').value;
+        }
+        if (step === 2) {
+            draState.breathHold = parseInt(document.getElementById('dra-breath-hold').value) || 0;
+            draState.nsScore = draState.tension + draState.coldExtremities + draState.yawning + draState.mouthBreathing;
+            var maxSymptom = Math.max(draState.tension, draState.coldExtremities, draState.yawning, draState.mouthBreathing);
+            draState.breathingCategory = maxSymptom === 0 ? 'Green' : maxSymptom === 1 ? 'Yellow' : 'Red';
+        }
+        if (step === 3) {
+            var painInput = document.querySelector('input[name="dra-has-pain"]:checked');
+            draState.hasPain = painInput && painInput.value === 'yes';
+            draState.painAreas = [];
+            document.querySelectorAll('input[name="dra-pain-area"]:checked').forEach(function(cb) {
+                draState.painAreas.push(cb.value);
+            });
+        }
+        if (step === 4) {
+            var worstInput = document.querySelector('input[name="dra-worst-movement"]:checked');
+            draState.worstMovement = worstInput ? worstInput.value : '';
+        }
+    }
+
+    function draUpdateProgress() {
+        var progress = ((draCurrentStep - 1) / 5) * 100;
+        document.getElementById('dra-progress-fill').style.width = progress + '%';
+        document.querySelectorAll('.dra-progress-step').forEach(function(stepEl, index) {
+            stepEl.classList.remove('active', 'completed');
+            if (index + 1 < draCurrentStep) stepEl.classList.add('completed');
+            else if (index + 1 === draCurrentStep) stepEl.classList.add('active');
+        });
+    }
+
+    window.draGoToReset = function() {
+        if (!draValidateStep(4)) return;
+        draSaveStepData(4);
+
+        if (draState.worstMovement === 'all-ok') {
+            draState.retestResult = 'none';
+            draCalculateAndShowResults();
+            return;
+        }
+
+        var movementNames = { 'toe-touch': 'Toe Touch Series', 'rotation': 'Standing Rotation', 'squat': 'Squat', 'forward-reach': 'Forward Reach' };
+        document.getElementById('dra-retest-movement-name').textContent = movementNames[draState.worstMovement] || 'worst movement';
+
+        document.getElementById('dra-step-' + draCurrentStep).classList.remove('active');
+        document.getElementById('dra-step-5').classList.add('active');
+        draCurrentStep = 5;
+        draUpdateProgress();
+        document.getElementById('dra-assessment-wrapper').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    window.draShowRetest = function() {
+        document.getElementById('dra-retest-section').classList.remove('dra-hidden');
+        document.getElementById('dra-retest-section').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    window.draShowResults = function() {
+        var retestResult = document.querySelector('input[name="dra-retest-result"]:checked');
+        if (!retestResult) { alert('Please select how the movement felt after the reset'); return; }
+        draState.retestResult = retestResult.value;
+        draCalculateAndShowResults();
+    };
+
+    // Make.com Webhook
+    function draSendToMake(data) {
+        var endpointURL = 'https://hook.us2.make.com/v73s3w533a3z5cx2vccw2yl5x14h5x8q';
+        var formData = new FormData();
+        for (var key in data) formData.append(key, data[key]);
+        fetch(endpointURL, { method: 'POST', body: formData }).catch(function(e) { console.error("Sync error:", e); });
+    }
+
+    function draCalculateAndShowResults() {
+        var overallScore = 0;
+
+        if (draState.breathHold >= 25) overallScore += 40;
+        else if (draState.breathHold >= 15) overallScore += 25;
+        else overallScore += 10;
+
+        overallScore += Math.max(0, 30 - (draState.nsScore * 2.5));
+        overallScore += draState.hasPain ? 5 : 15;
+
+        if (draState.retestResult === 'better') overallScore += 15;
+        else if (draState.retestResult === 'same') overallScore += 8;
+        else if (draState.retestResult === 'none') overallScore += 10;
+        else overallScore += 3;
+
+        var level, title, description;
+        var userName = draState.name || 'there';
+
+        if (overallScore >= 80) {
+            level = 3; title = 'Ready to Build';
+            description = 'Great baseline, ' + userName + '. Your nervous system is well-regulated, and your movement patterns are solid. You\'re ready for progressive strength training. A few targeted improvements will unlock even more potential.';
+        } else if (overallScore >= 55) {
+            level = 2; title = 'Foundation First';
+            description = 'Good news, ' + userName + ' — you\'ve got a solid starting point. Your assessment shows some areas that need attention. With the right foundation work, you\'ll be moving better in no time.';
+        } else {
+            level = 1; title = 'Reset & Rebuild';
+            description = 'Here\'s the truth, ' + userName + ': your body is asking for attention. The signs are clear. The good news? These are exactly the issues that respond best to a focused approach.';
+        }
+
+        var feedbackHTML = draBuildFeedback();
+
+        draSendToMake({
+            name: draState.name, email: draState.email, age: draState.age, kids: draState.kids, work: draState.workType,
+            breathCategory: draState.breathingCategory, breathHold: draState.breathHold, nsScore: draState.nsScore,
+            hasPain: draState.hasPain ? 'Yes' : 'No', painAreas: draState.painAreas.join(', '),
+            worstMove: draState.worstMovement, retestResult: draState.retestResult,
+            finalLevel: level, finalScore: Math.round(overallScore), status: 'Complete'
+        });
+
+        draRenderResults(level, title, description, feedbackHTML, Math.round(overallScore));
+    }
+
+    function draBuildFeedback() {
+        var feedbackItems = [];
+
+        if (draState.breathHold < 15 || draState.breathingCategory === 'Red') {
+            feedbackItems.push('<h3>🚨 Priority: Breathing</h3><p>Your breath hold was ' + draState.breathHold + 's (target 25s+) and/or your symptom scores show high stress load. This is limiting your movement capacity. Addressing your nervous system first will unlock everything else.</p>');
+        } else if (draState.breathHold < 25 || draState.breathingCategory === 'Yellow') {
+            feedbackItems.push('<h3>⚠️ Watch: Breathing</h3><p>Your breath hold was ' + draState.breathHold + 's and/or you showed some stress signs. There\'s room for improvement here that will support your training.</p>');
+        } else {
+            feedbackItems.push('<h3>✓ Solid: Breathing</h3><p>Your breath hold of ' + draState.breathHold + 's and low symptom scores indicate good CO₂ tolerance and nervous system regulation. Nice work.</p>');
+        }
+
+        if (draState.worstMovement !== 'all-ok') {
+            var movementNames = { 'toe-touch': 'Posterior Chain (Toe Touch)', 'rotation': 'Thoracic Rotation', 'squat': 'Squat Pattern', 'forward-reach': 'Single-Leg Balance' };
+            var movementName = movementNames[draState.worstMovement] || draState.worstMovement;
+
+            if (draState.retestResult === 'better') {
+                feedbackItems.push('<h3>⚡ Quick Win: ' + movementName + '</h3><p>The reset improved your movement. This tells us your limitation is largely tone/nervous system-based — not a structural issue. Daily resets before training will help maintain this.</p>');
+            } else if (draState.retestResult === 'same') {
+                feedbackItems.push('<h3>🔧 Work Needed: ' + movementName + '</h3><p>The reset didn\'t change much. This suggests a tissue or joint restriction that needs targeted mobility work, not just breathing resets.</p>');
+            } else if (draState.retestResult === 'worse') {
+                feedbackItems.push('<h3>🔍 Investigate: ' + movementName + '</h3><p>The reset made things feel worse. This is useful data — it suggests guarding or a compensation pattern. Let\'s look closer at what\'s driving this.</p>');
+            }
+        } else {
+            feedbackItems.push('<h3>✓ Movement: No Major Flags</h3><p>All four movements felt okay to you. That\'s a good sign for general mobility. Let\'s focus on building strength on this foundation.</p>');
+        }
+
+        if (draState.hasPain) {
+            feedbackItems.push('<h3>📋 Note: Pain Present</h3><p>You indicated pain in: ' + draState.painAreas.join(', ') + '. This doesn\'t stop us, but it shapes how we approach loading. We\'ll work around and eventually through this.</p>');
+        }
+
+        return feedbackItems.join('');
+    }
+
+    function draRenderResults(level, title, description, feedbackHTML, score) {
+        document.getElementById('dra-results-level').textContent = 'MOVEMENT READINESS LEVEL ' + level;
+        document.getElementById('dra-results-score').textContent = score;
+        document.getElementById('dra-results-title').textContent = title;
+        document.getElementById('dra-results-description').textContent = description;
+        document.getElementById('dra-feedback-box').innerHTML = feedbackHTML;
+
+        var nsStatus = draState.nsScore <= 4 ? 'Good' : draState.nsScore <= 8 ? 'Moderate' : 'High Stress';
+        var nsColor = draState.nsScore <= 4 ? 'good' : draState.nsScore <= 8 ? 'warning' : 'poor';
+        
+        var breathStatus = draState.breathHold >= 25 ? draState.breathHold + 's — Good' : draState.breathHold >= 15 ? draState.breathHold + 's — Moderate' : draState.breathHold + 's — Low';
+        var breathColor = draState.breathHold >= 25 ? 'good' : draState.breathHold >= 15 ? 'warning' : 'poor';
+
+        var painStatus = !draState.hasPain ? 'No limiting pain' : 'Pain: ' + (draState.painAreas.join(', ') || 'Yes');
+        var painColor = !draState.hasPain ? 'good' : 'warning';
+
+        var movementNames = { 'toe-touch': 'Posterior Chain (Toe Touch)', 'rotation': 'Thoracic Rotation', 'squat': 'Squat Pattern', 'forward-reach': 'Single-Leg Balance', 'all-ok': 'No major limitations' };
+        var resetNames = { 'better': 'Positive (NS responsive)', 'same': 'Neutral', 'worse': 'Needs attention', 'none': 'N/A — All OK' };
+        var resetColor = draState.retestResult === 'better' ? 'good' : draState.retestResult === 'same' ? 'warning' : draState.retestResult === 'none' ? '' : 'poor';
+
+        document.getElementById('dra-breakdown-nervous').textContent = nsStatus;
+        document.getElementById('dra-breakdown-nervous').className = 'dra-breakdown-value ' + nsColor;
+        document.getElementById('dra-breakdown-breath').textContent = breathStatus;
+        document.getElementById('dra-breakdown-breath').className = 'dra-breakdown-value ' + breathColor;
+        document.getElementById('dra-breakdown-pain').textContent = painStatus;
+        document.getElementById('dra-breakdown-pain').className = 'dra-breakdown-value ' + painColor;
+        document.getElementById('dra-breakdown-movement').textContent = movementNames[draState.worstMovement] || draState.worstMovement;
+        document.getElementById('dra-breakdown-reset').textContent = resetNames[draState.retestResult] || draState.retestResult;
+        document.getElementById('dra-breakdown-reset').className = 'dra-breakdown-value ' + resetColor;
+
+        document.querySelectorAll('.dra-step').forEach(function(s) { s.classList.remove('active'); });
+        document.getElementById('dra-step-6').classList.add('active');
+        draCurrentStep = 6;
+        draUpdateProgress();
+        document.getElementById('dra-assessment-wrapper').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.draRetakeAssessment = function() {
+        location.reload();
+    };
+})();
+</script>
