@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
+	import { env } from '$env/dynamic/public';
 
 	import { DRILL_VIDEO_ID, INTRO_VIDEO_ID, MOVEMENT_VIDEO_ID } from '$lib/assessment/dra/constants.js';
 	import { calculateResults } from '$lib/assessment/dra/scoring.js';
@@ -36,6 +37,11 @@
 		squat: 'Squat',
 		'forward-reach': 'Forward Reach'
 	};
+
+	const DEFAULT_ONXX_BOOKING_URL = 'https://essentialfitness.as.me/schedule/5f7120b5/appointment/40600203/calendar/10643060?appointmentTypeIds[]=40600203';
+	const DEFAULT_ONXX_SITE_URL = 'https://essentialfitness.co';
+	const ONXX_BOOKING_URL = env.PUBLIC_ONXX_BOOKING_URL || DEFAULT_ONXX_BOOKING_URL;
+	const ONXX_SITE_URL = env.PUBLIC_ONXX_SITE_URL || DEFAULT_ONXX_SITE_URL;
 
 	function createInitialState(): DRAState {
 		return {
@@ -342,19 +348,13 @@
 
 <svelte:head>
 	<title>Dad Ready Assessment | ONXX</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
-		rel="stylesheet"
-	/>
 </svelte:head>
 
 <div id="dra-assessment-wrapper" bind:this={wrapperEl}>
 	<div class="dra-container">
 		{#if !hasStarted}
 			<header class="dra-header" id="dra-intro-section">
-				<div class="dra-logo">ESSENTIAL FITNESS</div>
+				<div class="dra-logo">ONXX</div>
 				<h1>Dad Ready Assessment</h1>
 				<p class="dra-subhead">
 					Most men over 35 don't have a training problem - they have an awareness problem. Find out
@@ -864,7 +864,7 @@
 							<div class="dra-card-header">
 								<h2>The Retest</h2>
 								<p class="dra-card-subtitle">
-									Stand up. Retest your <strong style="color: #8B0000;">{getRetestMovementName()}</strong>
+									Stand up. Retest your <strong style="color: var(--color-onxx-red);">{getRetestMovementName()}</strong>
 									from before.
 								</p>
 							</div>
@@ -966,7 +966,7 @@
 							<h3>Turn This Into Action</h3>
 							<p>You've got the data. Let's turn it into a 15-minute game plan you can actually stick to.</p>
 							<a
-								href="https://essentialfitness.as.me/schedule/5f7120b5/appointment/40600203/calendar/10643060?appointmentTypeIds[]=40600203"
+								href={ONXX_BOOKING_URL}
 								class="dra-btn dra-btn-primary"
 								target="_blank"
 								rel="noreferrer"
@@ -985,7 +985,7 @@
 
 		<footer class="dra-footer">
 			<p>
-				&copy; {CURRENT_YEAR} <a href="https://essentialfitness.co">Essential Fitness</a>. All rights reserved.
+				&copy; {CURRENT_YEAR} <a href={ONXX_SITE_URL}>ONXX</a>. All rights reserved.
 			</p>
 			<p style="margin-top: 8px;">Dad Ready Assessment v2.0</p>
 		</footer>
@@ -997,7 +997,7 @@
 			<p>You've taken the assessment 4 times today.</p>
 			<p>Instead of guessing, let's build a real plan for you.</p>
 			<a
-				href="https://essentialfitness.as.me/schedule/5f7120b5/appointment/40600203/calendar/10643060?appointmentTypeIds[]=40600203"
+				href={ONXX_BOOKING_URL}
 				class="dra-btn dra-btn-primary dra-btn-block"
 			>
 				Schedule Your 15-Min Call
@@ -1007,5 +1007,4 @@
 		</div>
 	</div>
 </div>
-
 

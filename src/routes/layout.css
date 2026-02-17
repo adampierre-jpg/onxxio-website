@@ -1,3 +1,35 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--color-onxx-bg: #0f0f0f;
+	--color-onxx-alt: #111111;
+	--color-onxx-red: #e63946;
+	--color-onxx-velocity: #ff9500;
+	--color-onxx-text: #ffffff;
+	--color-onxx-muted: #a1a1a1;
+	--font-sans: 'Montserrat', system-ui, sans-serif;
+	--font-heading: 'Montserrat', system-ui, sans-serif;
+}
+
+@layer base {
+	body {
+		margin: 0;
+		background-color: var(--color-onxx-bg);
+		color: var(--color-onxx-text);
+		font-family: var(--font-sans);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-heading);
+		font-weight: 800;
+		color: var(--color-onxx-text);
+		letter-spacing: 0.02em;
+	}
+}
