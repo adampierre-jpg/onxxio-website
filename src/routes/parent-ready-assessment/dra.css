@@ -87,7 +87,6 @@
         max-width: 420px !important;
         margin: 0 auto 36px auto !important;
         list-style: none !important;
-        padding: 0 !important;
     }
 
     #dra-assessment-wrapper .dra-benefit-item {
@@ -100,7 +99,7 @@
     }
 
     #dra-assessment-wrapper .dra-benefit-item::before {
-        content: '\\2713' !important;
+        content: '✅' !important;
         color: var(--color-onxx-red) !important;
         font-weight: bold !important;
         font-size: 1.1rem !important;

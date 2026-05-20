@@ -41,7 +41,7 @@
 				{/each}
 			</nav>
 
-			<a class="site-cta" href="/dad-ready-assessment">Start Assessment</a>
+			<a class="site-cta" href={resolve('/parent-ready-assessment')}>Start Assessment</a>
 		</div>
 	</header>
 

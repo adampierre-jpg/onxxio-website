@@ -52,7 +52,7 @@
 				</p>
 			</div>
 			<div class="cta-row">
-				<a class="button-primary" href={resolve('/dad-ready-assessment')}>Start Your Assessment</a>
+				<a class="button-primary" href={resolve('/parent-ready-assessment')}>Start Your Assessment</a>
 				<a class="button-secondary" href={resolve('/coaching')}>View Programs</a>
 			</div>
 			<ul class="proof-strip" aria-label="Training details">
@@ -126,7 +126,7 @@
 					Start with a movement screen to see how you move, where you're strong, and what needs
 					work. No guessing.
 				</p>
-				<a class="button-primary" href={resolve('/dad-ready-assessment')}>Start Your Assessment</a>
+				<a class="button-primary" href={resolve('/parent-ready-assessment')}>Start Your Assessment</a>
 			</div>
 		</div>
 	</section>
@@ -193,7 +193,7 @@
 			<p class="section-kicker">Ready To Build?</p>
 			<h2>Build Strength That Actually Serves Your Life.</h2>
 			<div class="cta-row">
-				<a class="button-primary" href={resolve('/dad-ready-assessment')}>Start Your Assessment</a>
+				<a class="button-primary" href={resolve('/parent-ready-assessment')}>Start Your Assessment</a>
 				<a class="button-secondary" href="https://onxx.as.me/consultcall">Schedule A Call</a>
 			</div>
 		</div>

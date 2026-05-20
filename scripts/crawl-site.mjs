@@ -90,7 +90,7 @@ function routeType(pathname) {
 	if (/^\/blog\/[^/]+$/.test(pathname)) {
 		return 'blogPost';
 	}
-	if (pathname === '/dad-ready-assessment') {
+	if (pathname === '/dad-ready-assessment' || pathname === '/parent-ready-assessment') {
 		return 'assessment';
 	}
 	return 'page';
