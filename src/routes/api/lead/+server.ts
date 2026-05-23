@@ -21,6 +21,19 @@ function getStringArray(value: unknown): string[] {
 	return Array.isArray(value) ? value.filter((entry): entry is string => typeof entry === 'string') : [];
 }
 
+function getPainAreas(value: unknown): string[] {
+	const labels: Record<string, string> = {
+		back: 'Low Back',
+		'low-back': 'Low Back',
+		knees: 'Knees',
+		hips: 'Hips',
+		shoulders: 'Shoulders',
+		neck: 'Neck'
+	};
+
+	return getStringArray(value).map((entry) => labels[entry] ?? entry);
+}
+
 function buildMakePayload(data: Record<string, unknown>): Record<string, unknown> {
 	const results =
 		data.results && typeof data.results === 'object' ? (data.results as Record<string, unknown>) : {};
@@ -47,7 +60,7 @@ function buildMakePayload(data: Record<string, unknown>): Record<string, unknown
 		nsScore: getNumber(data.nsScore),
 		hasPain: pain,
 		pain,
-		painAreas: getStringArray(data.painAreas),
+		painAreas: getPainAreas(data.painAreas),
 		worstMove: getString(data.worstMovement),
 		worstMovement: getString(data.worstMovement),
 		retestResult: getString(data.retestResult),
