@@ -1,7 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
-const BLOG_INDEX_PATH = resolve(process.cwd(), 'content', 'blog-index.json');
+import blogIndexFile from '../../../content/blog-index.json' with { type: 'json' };
+
 const BLOG_CONTENT_DIR = resolve(process.cwd(), 'content', 'blog');
 
 export type BlogIndexItem = {
@@ -79,8 +80,7 @@ function normalizeSlug(slug: string): string {
 }
 
 export async function getBlogIndex(): Promise<BlogIndexItem[]> {
-	const raw = await readFile(BLOG_INDEX_PATH, 'utf8');
-	const parsed = JSON.parse(raw) as BlogIndexFile;
+	const parsed = blogIndexFile as BlogIndexFile;
 	const posts = Array.isArray(parsed.posts) ? parsed.posts : [];
 
 	return posts
@@ -112,7 +112,22 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
 	} catch (error) {
 		const code = (error as NodeJS.ErrnoException).code;
 		if (code === 'ENOENT') {
-			return null;
+			const indexed = (await getBlogIndex()).find((post) => post.slug === normalizedSlug);
+			if (!indexed) {
+				return null;
+			}
+
+			const fallbackBody = [
+				indexed.excerpt,
+				indexed.source ? `[Read the original post](${indexed.source})` : ''
+			]
+				.filter((entry) => entry.length > 0)
+				.join('\n\n');
+
+			return {
+				...indexed,
+				contentMarkdown: fallbackBody
+			};
 		}
 		throw error;
 	}
