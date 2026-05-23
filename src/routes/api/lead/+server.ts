@@ -13,68 +13,62 @@ function getLegacyPainValue(value: unknown): string {
 	return '';
 }
 
-function appendField(formData: FormData, key: string, value: unknown): void {
-	if (Array.isArray(value)) {
-		formData.append(key, value.join(', '));
-		return;
-	}
-
-	if (typeof value === 'number') {
-		formData.append(key, String(Math.round(value)));
-		return;
-	}
-
-	formData.append(key, getString(value));
+function getNumber(value: unknown): number | '' {
+	return typeof value === 'number' && Number.isFinite(value) ? Math.round(value) : '';
 }
 
-function buildMakeFormData(data: Record<string, unknown>): FormData {
+function getStringArray(value: unknown): string[] {
+	return Array.isArray(value) ? value.filter((entry): entry is string => typeof entry === 'string') : [];
+}
+
+function buildMakePayload(data: Record<string, unknown>): Record<string, unknown> {
 	const results =
 		data.results && typeof data.results === 'object' ? (data.results as Record<string, unknown>) : {};
 	const breakdown =
 		results.breakdown && typeof results.breakdown === 'object'
 			? (results.breakdown as Record<string, unknown>)
 			: {};
-	const formData = new FormData();
+	const pain = getLegacyPainValue(data.hasPain);
 
-	appendField(formData, 'name', data.name);
-	appendField(formData, 'email', data.email);
-	appendField(formData, 'age', data.age);
-	appendField(formData, 'kids', data.kids);
-	appendField(formData, 'work', data.workType);
-	appendField(formData, 'workType', data.workType);
-	appendField(formData, 'tensionScore', data.tension);
-	appendField(formData, 'coldExtremitiesScore', data.coldExtremities);
-	appendField(formData, 'yawningScore', data.yawning);
-	appendField(formData, 'mouthBreathingScore', data.mouthBreathing);
-	appendField(formData, 'breathCategory', data.breathingCategory);
-	appendField(formData, 'breathingCategory', data.breathingCategory);
-	appendField(formData, 'breathHold', data.breathHold);
-	appendField(formData, 'nsScore', data.nsScore);
-	formData.append('hasPain', getLegacyPainValue(data.hasPain));
-	appendField(formData, 'pain', getLegacyPainValue(data.hasPain));
-	appendField(formData, 'painAreas', data.painAreas);
-	appendField(formData, 'worstMove', data.worstMovement);
-	appendField(formData, 'worstMovement', data.worstMovement);
-	appendField(formData, 'retestResult', data.retestResult);
-	appendField(formData, 'finalLevel', results.level);
-	appendField(formData, 'finalScore', results.score);
-	appendField(formData, 'resultTitle', results.title);
-	appendField(formData, 'resultDescription', results.description);
-	appendField(formData, 'nsStatus', breakdown.nsStatus);
-	appendField(formData, 'breathStatus', breakdown.breathStatus);
-	appendField(formData, 'painStatus', breakdown.painStatus);
-	appendField(formData, 'movementLabel', breakdown.movementLabel);
-	appendField(formData, 'resetLabel', breakdown.resetLabel);
-	appendField(formData, 'nsTone', breakdown.nsTone);
-	appendField(formData, 'breathTone', breakdown.breathTone);
-	appendField(formData, 'painTone', breakdown.painTone);
-	appendField(formData, 'resetTone', breakdown.resetTone);
-	appendField(formData, 'feedback', results.feedbackHTML);
-	appendField(formData, 'status', data.status);
-	appendField(formData, 'submittedAt', data.submittedAtISO);
-	formData.append('source', 'onxx.io Parent Ready Assessment');
-
-	return formData;
+	return {
+		name: getString(data.name),
+		email: getString(data.email),
+		age: getNumber(data.age),
+		kids: getString(data.kids),
+		work: getString(data.workType),
+		workType: getString(data.workType),
+		tensionScore: getNumber(data.tension),
+		coldExtremitiesScore: getNumber(data.coldExtremities),
+		yawningScore: getNumber(data.yawning),
+		mouthBreathingScore: getNumber(data.mouthBreathing),
+		breathCategory: getString(data.breathingCategory),
+		breathingCategory: getString(data.breathingCategory),
+		breathHold: getNumber(data.breathHold),
+		nsScore: getNumber(data.nsScore),
+		hasPain: pain,
+		pain,
+		painAreas: getStringArray(data.painAreas),
+		worstMove: getString(data.worstMovement),
+		worstMovement: getString(data.worstMovement),
+		retestResult: getString(data.retestResult),
+		finalLevel: getNumber(results.level),
+		finalScore: getNumber(results.score),
+		resultTitle: getString(results.title),
+		resultDescription: getString(results.description),
+		nsStatus: getString(breakdown.nsStatus),
+		breathStatus: getString(breakdown.breathStatus),
+		painStatus: getString(breakdown.painStatus),
+		movementLabel: getString(breakdown.movementLabel),
+		resetLabel: getString(breakdown.resetLabel),
+		nsTone: getString(breakdown.nsTone),
+		breathTone: getString(breakdown.breathTone),
+		painTone: getString(breakdown.painTone),
+		resetTone: getString(breakdown.resetTone),
+		feedback: getString(results.feedbackHTML),
+		status: getString(data.status),
+		submittedAt: getString(data.submittedAtISO),
+		source: 'onxx.io Parent Ready Assessment'
+	};
 }
 
 function isValidEmail(email: string): boolean {
@@ -116,7 +110,10 @@ export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const response = await fetch(webhookUrl, {
 			method: 'POST',
-			body: buildMakeFormData(data)
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(buildMakePayload(data))
 		});
 
 		if (!response.ok) {
