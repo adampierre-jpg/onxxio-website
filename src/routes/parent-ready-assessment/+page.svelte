@@ -249,7 +249,8 @@
 				level: resultSummary.level,
 				title: resultSummary.title,
 				description: resultSummary.description,
-				breakdown: resultSummary.breakdown
+				breakdown: resultSummary.breakdown,
+				feedbackHTML: resultSummary.feedbackHTML
 			},
 			status: 'Complete',
 			submittedAtISO: new Date().toISOString()
