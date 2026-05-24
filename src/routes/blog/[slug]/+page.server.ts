@@ -5,8 +5,8 @@ import { getBlogPost } from '$lib/content/blog.server.js';
 
 import type { PageServerLoad } from './$types.js';
 
-export const load = (async ({ params }) => {
-	const post = await getBlogPost(params.slug);
+export const load = (async ({ fetch, params }) => {
+	const post = await getBlogPost(params.slug, fetch);
 	if (!post) {
 		throw error(404, 'Blog post not found');
 	}
